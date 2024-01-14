@@ -1,0 +1,23 @@
+# Ignore all files
+*
+!*/
+
+# Whitelist yaml, readme and ignore files
+!.gitignore
+!*.yaml
+!*.yml
+!*.md
+!*.sh
+!.HA_VERSION
+
+# Ignore folders.
+.cloud
+.storage
+blueprints
+deps
+tts
+
+# Ignore private yamls
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
