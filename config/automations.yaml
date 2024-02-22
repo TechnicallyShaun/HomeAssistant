@@ -1,1 +1,27 @@
-[]
+- id: '1708614709696'
+  alias: NFC Dinner time
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: c7a03dc7-97c9-4b62-8f1e-d28e61d8d137
+  condition: []
+  action:
+  - service: media_player.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.home_group
+  - service: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.8
+    target:
+      entity_id: media_player.home_group
+  - service: tts.speak
+    target:
+      entity_id: tts.google_en_com
+    data:
+      cache: true
+      message: Dinner time, dinner time, please come to the kitchen!
+      media_player_entity_id: media_player.home_group
+  mode: single
